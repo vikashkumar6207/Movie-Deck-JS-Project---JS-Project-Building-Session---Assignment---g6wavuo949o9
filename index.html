@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Deck JS Project - JS Project Building</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
 
+    <!-- -------------header ------------->
+    <header>
+        <nav>
+            <a href="/Movie-Deck-JS-Project---JS-Project-Building-Session---Assignment---g6wavuo949o9/Movie-Deck/index.html">
+                <h1>Movie Deck</h1>
+            </a>
+        </nav>
+    </header>
+
+    <!-- --------search Bar----- -->
+
+    <section id="search-bar" class="search-bar">
+        <input type="search" name="search" id="search-input" placeholder="Search by name…" autocomplete="off"/>
+        <button id="search-button">Search</button>
+    </section>
+
+    <!----------- sorting option--------- -->
+
+    <div id="sorting-options" class="sorting-options">
+        <button id="sort-by-date" class="sort-button ">Sort by Date</button>
+        <button id="sort-by-rating" class="sort-button">Sort by rating </button>
+    </div>
+
+    <!----------- Tabs Container ----------->
+
+    <div  class="tabs">
+        <button id="all-tab" class="tab">All</button>
+        <button id="favorites-tab" class="tab">Favorites</button>
+    </div>
+
+
+    <!-- ------movie list pagination button container--------- -->
+
+    <article class="movie-list-pagination-btns">
+
+        <!-- Movie list display -->
+        <div id="movie-list" class="movie-list">
+            <!-- Js will populate this -->
+        </div>
+
+        <!------- pagination------ -->
+
+        <div id="pagination" class="pagination">
+            <button id="prev-button" class="pagination-btn">Previous</button>
+            <button id="page-number-button" class="pagination-btn">Current Page: 1</button>
+            <button id="next-button" class="pagination-btn">Next</button>
+        </div>
+
+    </article>
+
+    <!-- -------------footer ------------ -->
+    <footer id="footer">
+        <p>© 2023 Movie Deck</p>
+    </footer>
+    <script src="App.js"></script>
+</body>
+</html>
