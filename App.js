@@ -43,9 +43,11 @@ function remapData(movieList = []) {
 async function fetchData(pageNumber, sortingOption) {
     let url = "";
     if (sortingOption) {
-        url = ` https://api.themoviedb.org/3/discover/movie?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${pageNumber}&sort_by=popularity.desc`;
-    } else {
-        url = ` https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${pageNumber}`;
+        url = `https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${page}`;
+    
+    } 
+    else {
+        url = `https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${pageNumber}`;
     }
     const response = await fetch(url);
     const data = await response.json();
@@ -204,6 +206,14 @@ sortByRateButtonElement.addEventListener('click', () => {
 
 });
 
+
+// const sortByRatting = () =>{
+//     const sortedIncreasing = modifiedList.sort((movieA, movieB)=>{
+//      return movieA.voteAverage - movieB.voteAverage;
+//      randerMovies(...sortedIncreasing);
+ 
+//     })
+//  }
 //TABS
 
     function displayMoviesForSwitchTab(element){
